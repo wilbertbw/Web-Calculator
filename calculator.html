@@ -9,7 +9,25 @@
   <body>
     <p class = "js-display-calculator display-calculator"></p>
 
-    <p>
+    <p class = "calculator-top-row">
+      <button class = "util-buttons" onclick = "
+      calculation += '(';
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">(</button>
+
+      <button class = "util-buttons" onclick = "
+      calculation += ')';
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">)</button>
+
+      <button class = "util-buttons" onclick = "
+      calculation += Math.E;
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">e</button>
+
       <button onclick = "
       calculation += '1';
       localStorage.setItem('current', calculation);
@@ -36,6 +54,24 @@
     </p>
 
     <p>
+      <button class = "util-buttons" onclick = "
+      calculation += Math.PI;
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">&#8508;</button>
+
+      <button class = "util-buttons" onclick = "
+      calculation = Math.log(calculation);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">ln</button>
+
+      <button class = "log-base-10 util-buttons" onclick = "
+      calculation = Math.log(calculation) / Math.log(10);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">log&#8321;&#8320;</button>
+
       <button onclick = "
       calculation += '4';
       localStorage.setItem('current', calculation);
@@ -62,6 +98,24 @@
     </p>
 
     <p>
+      <button class = "trigonometry-buttons util-buttons" onclick = "
+      calculation = Math.sin(calculation);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">sin</button>
+
+      <button class = "trigonometry-buttons util-buttons" onclick = "
+      calculation = Math.cos(calculation);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">cos</button>
+
+      <button class = "trigonometry-buttons util-buttons" onclick = "
+      calculation = Math.tan(calculation);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">tan</button>
+
       <button onclick = "
       calculation += '7';
       localStorage.setItem('current', calculation);
@@ -84,10 +138,28 @@
       calculation += ' * ';
       localStorage.setItem('current', calculation);
       displayCalculator(calculation);
-      ">*</button>
+      ">&#215;</button>
     </p>
 
     <p>
+      <button class = "root-buttons util-buttons" onclick = "
+      calculation = Math.sqrt(calculation);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">&#8730;</button>
+
+      <button class = "root-buttons util-buttons" onclick = "
+      calculation = Math.cbrt(calculation);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">&#8731;</button>
+
+      <button class = "root-buttons util-buttons" onclick = "
+      calculation = Math.pow(calculation, 1/4);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">&#8732;</button>
+
       <button onclick = "
       calculation += '0';
       localStorage.setItem('current', calculation);
@@ -101,7 +173,7 @@
       ">.</button>
 
       <button onclick = "
-      calculation = eval(calculation);
+      calculation = Function('return ' + calculation)();
       localStorage.setItem('current', calculation);
       displayCalculator(calculation);
       ">=</button>
@@ -110,10 +182,28 @@
       calculation += ' / ';
       localStorage.setItem('current', calculation);
       displayCalculator(calculation);
-      ">/</button>
+      ">&#xf7;</button>
     </p>
 
     <p>
+      <button class = "util-buttons" onclick = "
+      calculation = Math.pow(calculation, 2);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">x&#178;</button>
+
+      <button class = "util-buttons" onclick = "
+      calculation = Math.pow(calculation, 3);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">x&#179;</button>
+
+      <button class = "util-buttons" onclick = "
+      calculation = Math.pow(calculation, 4);
+      localStorage.setItem('current', calculation);
+      displayCalculator(calculation);
+      ">x&#8308;</button>
+      
       <button class = "clear-button"
       onclick = "calculation = '';
       localStorage.removeItem('current');

@@ -1,6 +1,14 @@
-body {
+body{
   background-color: black;
   font-family: Arial;
+}
+
+p{
+ margin-left: 14px; 
+}
+
+button{
+  cursor: pointer;
 }
 
 button{
@@ -13,6 +21,7 @@ button{
   font-family: Arial;
   font-size: 26px;
   margin-right: 4px;
+  padding-top: 2px;
 }
 
 .symbol-button{
@@ -20,12 +29,32 @@ button{
 }
 
 .display-calculator{
-  margin-top: 12px;
+  margin-top: 24px;
   margin-bottom: 4px;
+  margin-left: 34px;
   color: white;
   font-size: 46px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .clear-button {
   font-size: 18px;
+  width: 120px;
+}
+
+.calculator-top-row{
+  margin-top: 100px;
+}
+
+
+
+.root-buttons{
+  padding-left: 2px;
+}
+
+.util-buttons{
+  font-size: 20px;
+  padding-top: 0;
 }
